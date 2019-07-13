@@ -14,9 +14,9 @@ pipeline {
         stage ('Unzip') {
 
             steps {
-                withMaven(maven : 'maven_3_5_0') {
-                    sh 'mvn test'
-                }
+                
+                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
+                
             }
         }
 
