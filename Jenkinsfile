@@ -6,7 +6,7 @@ pipeline {
 
             steps {
                
-                    echo 'himanshu'
+                   git url: 'https://github.com/hjain4/jenkins-example.git'
                
             }
         }
