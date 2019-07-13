@@ -7,7 +7,7 @@ pipeline {
         stage ('Download') {
 
             steps {
-                bat "echo ${params.name}"
+                echo ${params.name}
                
                    git url: 'https://github.com/hjain4/jenkins-example.git'
                
