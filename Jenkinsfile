@@ -1,10 +1,13 @@
 pipeline {
     agent any
-
+    parameters {
+        booleanParam(defaultValue: true, description: '', name: 'userFlag')
+    }
     stages {
         stage ('Download') {
 
             steps {
+                bat 'echo %PATH%'
                
                    git url: 'https://github.com/hjain4/jenkins-example.git'
                
