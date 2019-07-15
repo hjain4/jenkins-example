@@ -19,7 +19,7 @@ pipeline {
             steps {
                 
                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
-                Expand-Archive -LiteralPath .\Machine-Learning-A-Z-Q-A.zip -DestinationPath .\InvoicesUnzipped
+                Expand-Archive -LiteralPath '.\Machine-Learning-A-Z-Q-A.zip' -DestinationPath '.\InvoicesUnzipped'
                 
             }
         }
