@@ -19,7 +19,8 @@ pipeline {
             steps {
                 
                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
-                unzip( zipFile: 'Machine-Learning-A-Z-Q-A.zip', dir: '${workspace}' )
+                unzip zipFile: Machine-Learning-A-Z-Q-A, dir: '${workspace}', quiet: true
+              
                 
             }
         }
