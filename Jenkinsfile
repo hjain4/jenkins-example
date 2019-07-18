@@ -1,4 +1,3 @@
-PROJECT_RECIPIENT_LIST = 'himanshu.jain@outlook.com'
 
 pipeline {
     agent any
@@ -42,11 +41,12 @@ pipeline {
             }
         }
         stage ('Mail Done') {
+             def PROJECT_RECIPIENT_LIST = "himanshu.jain@outlook.com"
             steps {
                 
                 
                
-                   emailext body: 'A Test EMail',recipientProviders: [[$class: 'PROJECT_RECIPIENT_LIST']], subject: 'Test'
+                emailext body: 'A Test EMail',to: "${PROJECT_RECIPIENT_LIST}", subject: 'Test'
                        
                 
           
