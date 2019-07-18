@@ -1,4 +1,4 @@
-
+PROJECT_RECIPIENT_LIST = "himanshu.jain@outlook.com"
 pipeline {
     agent any
     parameters {
@@ -41,7 +41,7 @@ pipeline {
             }
         }
         stage ('Mail Done') {
-             def PROJECT_RECIPIENT_LIST = "himanshu.jain@outlook.com"
+             
             steps {
                 
                 
