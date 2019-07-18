@@ -45,11 +45,8 @@ pipeline {
             steps {
                 
                 
-                post {
-               always {
+               
                    emailext body: 'A Test EMail', recipientProviders: PROJECT_RECIPIENT_LIST, subject: 'Test'
-                  }
-                }
                        
                 
           
