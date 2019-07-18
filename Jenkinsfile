@@ -36,9 +36,7 @@ pipeline {
         }
         stage ('Delete Files') {
             steps {
-                withMaven(maven : 'maven_3_5_0') {
-                    sh 'mvn deploy'
-                }
+                  powershell ('Remove-Item .\\Machine-Learning-A-Z-Q-A.zip')
             }
         }
         stage ('Mail Done') {
