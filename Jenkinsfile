@@ -31,7 +31,7 @@ pipeline {
         stage ('List Files') {
             steps {
                  powershell ('ls')
-                }
+               
             }
         }
         stage ('Delete Files') {
