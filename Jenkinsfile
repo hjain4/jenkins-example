@@ -1,3 +1,5 @@
+PROJECT_RECIPIENT_LIST = 'himanshu.jain@kronos.com'
+
 pipeline {
     agent any
     parameters {
@@ -41,9 +43,12 @@ pipeline {
         }
         stage ('Mail Done') {
             steps {
-                publishers {
-                  mailer('himanshu.jain@kronos.com', true, true)
-                }           
+                       sendMail2(
+                        to: PROJECT_RECIPIENT_LIST,
+                        subject: 'job done',
+                        body: 'deploy-build-success'
+                )
+          
             }
         }
     }
