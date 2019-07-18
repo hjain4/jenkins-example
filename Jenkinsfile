@@ -1,4 +1,4 @@
-PROJECT_RECIPIENT_LIST = 'himanshu.jain@kronos.com'
+PROJECT_RECIPIENT_LIST = 'himanshu.jain@outlook.com'
 
 pipeline {
     agent any
