@@ -10,6 +10,7 @@ pipeline {
                 echo "${params.name}"
                
                    git url: 'https://github.com/hjain4/jenkins-example.git'
+                powershell 'Write-Output "Hello, World!"'
                
             }
         }
