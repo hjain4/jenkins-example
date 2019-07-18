@@ -43,11 +43,15 @@ pipeline {
         }
         stage ('Mail Done') {
             steps {
-                       sendMail2(
-                        to: PROJECT_RECIPIENT_LIST,
-                        subject: 'job done',
-                        body: 'deploy-build-success'
-                )
+                
+                
+                post {
+               always {
+                   emailext body: 'A Test EMail', recipientProviders: PROJECT_RECIPIENT_LIST, subject: 'Test'
+                  }
+                }
+                       
+                
           
             }
         }
