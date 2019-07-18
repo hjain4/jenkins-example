@@ -41,9 +41,9 @@ pipeline {
         }
         stage ('Mail Done') {
             steps {
-                withMaven(maven : 'maven_3_5_0') {
-                    sh 'mvn deploy'
-                }
+                publishers {
+                  mailer('himanshu.jain@kronos.com', true, true)
+                }           
             }
         }
     }
