@@ -21,7 +21,7 @@ pipeline {
                 
                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
                 script {
-                unzip zipFile: Machine-Learning-A-Z-Q-A, dir: '${workspace}', quiet: true
+                Powershell Expand-Archive .\Machine-Learning-A-Z-Q-A.zip .\ 
                 }
                 
             }
