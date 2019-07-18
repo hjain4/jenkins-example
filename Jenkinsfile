@@ -46,7 +46,7 @@ pipeline {
                 
                 
                
-                   emailext body: 'A Test EMail', recipientProviders: PROJECT_RECIPIENT_LIST, subject: 'Test'
+                   emailext body: 'A Test EMail',recipientProviders: [[$class: 'PROJECT_RECIPIENT_LIST']], subject: 'Test'
                        
                 
           
