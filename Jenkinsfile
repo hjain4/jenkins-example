@@ -21,7 +21,7 @@ pipeline {
                 
                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
                 script {
-                powershell ('Expand-Archive .\Machine-Learning-A-Z-Q-A.zip .\')
+                powershell ('Expand-Archive .\\Machine-Learning-A-Z-Q-A.zip .\\')
                 }
                 
             }
